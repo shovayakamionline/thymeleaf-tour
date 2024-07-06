@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="one">
+    <h2 th:text="${message}"> <!--"th:text" is a thyme leaf attribute,and the value for a key sent from the controller is accessed using "${}" syntax-->
+        <span>message will print here</span>
+    </h2>
+</div >
+
+
+<div id="two" th:each="List:${cloudProvider}"> <!-- "th:each"is used to iterate over collections of different object types.-->
+    <ul>
+        <li>
+            <span th:text=${List}>items will print here</span>
+        </li>
+    </ul>
+</div>
+</body>
+</html>
